@@ -6,6 +6,10 @@ if len(sys.argv)!=2:
 	sys.exit("Usage: osint-scraper <email>")
 
 # Checking available email searches in browser
-webbrowser.open('https://thatsthem.com/email/' + sys.argv[1])
-webbrowser.open('https://www.skymem.info/srch?q=' + sys.argv[1] + '&ss=home')
+# webbrowser.open('https://thatsthem.com/email/' + sys.argv[1])
+# webbrowser.open('https://www.skymem.info/srch?q=' + sys.argv[1] + '&ss=home')
 webbrowser.open('https://www.google.com/search?q="' + sys.argv[1] + '"+filetype%3Apdf')
+
+# Checking for password files via dorking
+webbrowser.open('https://www.google.com/search?q="' + sys.argv[1] + '"+allintext%3Apassword+filetype%3Alog')
+webbrowser.open('https://www.google.com/search?q="' + sys.argv[1] + '+filetype%3Axls+inurl%3A"email.xls"')
